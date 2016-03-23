@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Databuddy : DataBuddy 0.3.5 under construction">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Databuddy</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/data-buddy/Databuddy">View on GitHub</a>
+
+          <h1 id="project_title">Databuddy</h1>
+          <h2 id="project_tagline">DataBuddy 0.3.5 under construction</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/data-buddy/Databuddy/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/data-buddy/Databuddy/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="databuddy" class="anchor" href="#databuddy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataBuddy</h1>
+
+<p>Do it yourself data integration starter kit.</p>
+
+<h2>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h2>
+
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Platform</th>
+<th>data-buddy (GUI)</th>
+<th>QueryCopy (command line)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>32bit</td>
+<td><a href="https://github.com/data-buddy/DataBuddy/releases/tag/0.3.5">0.3.5 beta</a></td>
+<td><a href="https://github.com/QueryCopy/QueryCopy-for-Oracle/releases/tag/v1.23.9">1.23.9 beta</a></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>There are 2 components. Upon "Run" data-buddy (UI) will kick off QueryCopy (<code>qc32\qc.exe</code>) out of process.</p>
+</blockquote>
+
+<h2>
+<a id="purpose" class="anchor" href="#purpose" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Purpose</h2>
+
+<ul>
+<li>It is data integration software used to define technical processes to combine data from different sources. Data is moved across RDBMS borders using CSV files.</li>
+<li>
+<strong>DataBuddy</strong> facilitates data delivery from multiple relational data sources including Oracle, SQLServer, DB2, SAP Sybase, Informix, MySQL, Infobright, MariaDB, PostgreSQL, TimesTen, and SQLite.</li>
+<li>It requires minimal initial configuration and lets you manage data integration process using GUI or command line.</li>
+<li>Your data integration processes are stored as session files and can be scripted into your ETL pipelines or used in ad-hoc manner.</li>
+<li>Lets you develop Extract-Copy-Load processes to scrub and ingest large, distinct data sets from multiple sources into a unified data warehouse.</li>
+<li>Provides structured and ad-hoc access to large datasets.</li>
+<li>Databuddy also supports enables seamless, bi-directional integration between all major RDBMSs, such as Oracle, SQLServer, DB2, SAP Sybase, Informix, MySQL, Infobright, MariaDB, and PostgreSQL. In addition,
+it supports self-service data extraction, preparation, and cleansing by database developers.</li>
+</ul>
+
+<h2>
+<a id="audience" class="anchor" href="#audience" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Audience</h2>
+
+<p>Database developers, ETL developers, Data Integrators.</p>
+
+<h2>
+<a id="designated-environment" class="anchor" href="#designated-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designated Environment</h2>
+
+<p>Pre-Prod (UAT/QA/DEV)</p>
+
+<h2>
+<a id="databases-supported" class="anchor" href="#databases-supported" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Databases supported</h2>
+
+<h3>
+<a id="sql" class="anchor" href="#sql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQL</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>GUI (data-buddy)</th>
+<th>Command line (QueryCopy)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Informix</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Infobright</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>Oracle</strong></td>
+<td>yes</td>
+<td><a href="https://github.com/QueryCopy/QueryCopy-for-Oracle/releases/tag/v1.23.9">yes</a></td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>SQLServer</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sybase</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>TimesTen</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="nosql" class="anchor" href="#nosql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>noSQL</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>GUI (data-buddy)</th>
+<th>Command line (QueryCopy)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MongoDB</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="data-tools" class="anchor" href="#data-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Tools</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>GUI (data-buddy)</th>
+<th>Command line (QueryCopy)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CURL</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="file-formats" class="anchor" href="#file-formats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>File formats</h2>
+
+<h3>
+<a id="sql-1" class="anchor" href="#sql-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQL</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>DDL extract</th>
+<th>CSV extract</th>
+<th>CSV load</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Informix</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><strong>Oracle</strong></td>
+<td>Table</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>SQLServer</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sybase</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>TimesTen</td>
+<td></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>DDL extract works only for Oracle tables.</p>
+</blockquote>
+
+<h3>
+<a id="nosql-1" class="anchor" href="#nosql-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>noSQL</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>CSV extract</th>
+<th>CSV load</th>
+<th>JSON extract</th>
+<th>JSON load</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MongoDB</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="data-tools-1" class="anchor" href="#data-tools-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Tools</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>CSV extract</th>
+<th>CSV load</th>
+<th>JSON extract</th>
+<th>JSON load</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CURL</td>
+<td>yes</td>
+<td></td>
+<td>yes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="components" class="anchor" href="#components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Components</h2>
+
+<ul>
+<li>GUI - data-buddy (wxPython, PyInstaller).</li>
+<li>Command line -<a href="https://github.com/QueryCopy/QueryCopy-for-Oracle/releases/tag/v1.23.9">QueryCopy</a> (Python, PyInstaller).</li>
+</ul>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features:</h2>
+
+<h3>
+<a id="front-end-gui-data-buddy" class="anchor" href="#front-end-gui-data-buddy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Front end, GUI (data-buddy).</h3>
+
+<ul>
+<li>Session management.</li>
+</ul>
+
+<h3>
+<a id="command-line-querycopy" class="anchor" href="#command-line-querycopy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command line (QueryCopy):</h3>
+
+<ul>
+<li>[x] Multi-query load.</li>
+<li>[x] Partition/sub-partition copy</li>
+<li>[x] Sharded copy (turbo mode)</li>
+<li>[x] Custom spool location (config/user_conf.py)</li>
+<li>[x] config/include/oracle.py - configurable SQL*Loader args.</li>
+<li>[x] 3 generic arguments (use them to pass job_id or timestamp and process in config/user_config.py)</li>
+<li>[x] added all usecases</li>
+<li>[x] lame_duck/limit fix for trial runs</li>
+<li>[x] keep_data_file param (set it to 1 if you want to keep data dump)</li>
+<li>[x] White-space control.</li>
+<li>[x] Header line control.</li>
+<li>[x] Truncate target table/partition/subpartition</li>
+<li>[x] Ask to truncate.</li>
+<li>[x] No client (url) connect.</li>
+<li>[x] Supports CSV file load from multiple dirs.</li>
+<li>[x] --exit_on_key - let's you keep exec window open after load job is done</li>
+<li>[x] file download using curl.exe</li>
+</ul>
+
+<h2>
+<a id="pipeline-types" class="anchor" href="#pipeline-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pipeline types</h2>
+
+<ul>
+<li>E <strong>Extract</strong>
+</li>
+<li>L <strong>Load</strong>
+</li>
+<li>C <strong>Copy</strong>
+</li>
+</ul>
+
+<h3>
+<a id="sql-2" class="anchor" href="#sql-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQL</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Table</th>
+<th>Partition</th>
+<th>Subpartition</th>
+<th>CSV Files</th>
+<th>Queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>Informix</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td><strong>Oracle</strong></td>
+<td>E/L/C</td>
+<td>E/L/C</td>
+<td>E/L/C</td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>E/L/C</td>
+<td>E/L/C</td>
+<td>E/L/C</td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>SQLServer</td>
+<td>E/L/C</td>
+<td>E/L/C</td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>Sybase</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+<tr>
+<td>TimesTen</td>
+<td>E/L/C</td>
+<td></td>
+<td></td>
+<td>L/E</td>
+<td>E/C</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="nosql-2" class="anchor" href="#nosql-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>noSQL</h3>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Collection</th>
+<th>CSV Files</th>
+<th>JSON Files</th>
+<th>Queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MongoDB</td>
+<td>E/L/C</td>
+<td>E/L</td>
+<td>E/L</td>
+<td>E/C</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="tools-used-to-extract-load-and-query-data" class="anchor" href="#tools-used-to-extract-load-and-query-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tools used to extract, load, and query data</h2>
+
+<ol>
+<li>
+<strong>DbShell</strong> - queries target and source for table metadata.</li>
+<li>
+<strong>Spooler</strong>  - extracts data to temp file from source.</li>
+<li>
+<strong>Loader</strong> - loads temp file to target using bulk loader.</li>
+</ol>
+
+<h4>
+<a id="sql-stores" class="anchor" href="#sql-stores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SQL stores.</h4>
+
+<table>
+<thead>
+<tr>
+<th>DB family</th>
+<th>Database</th>
+<th>Spooler</th>
+<th>Loader</th>
+<th>DbShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2</td>
+<td>DB2 Advanced Enterprise Server</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>DB2 Advanced Workgroup Server</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>DB2 Developer Edition</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>DB2 Express</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>DB2 Express C</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>DB2 Enterprise Server</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>DB2 Workgroup Server</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+<td>db2.exe</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>MySQL</td>
+<td>mysql.exe</td>
+<td>mysql.exe</td>
+<td>mysql.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>Infobright</td>
+<td>mysql.exe</td>
+<td>mysql.exe</td>
+<td>mysql.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>MariaDB</td>
+<td>mysql.exe</td>
+<td>mysql.exe</td>
+<td>mysql.exe</td>
+</tr>
+<tr>
+<td>Informix</td>
+<td>Informix IDS</td>
+<td>dbaccess.exe</td>
+<td>dbaccess.exe</td>
+<td>dbaccess.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>Informix Innovator C</td>
+<td>dbaccess.exe</td>
+<td>dbaccess.exe</td>
+<td>dbaccess.exe</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>Oracle 12c</td>
+<td>sqlplus.exe</td>
+<td>sqlldr.exe</td>
+<td>sqlplus.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>Oracle 11g</td>
+<td>sqlplus.exe</td>
+<td>sqlldr.exe</td>
+<td>sqlplus.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>Exadata</td>
+<td>sqlplus.exe</td>
+<td>sqlldr.exe</td>
+<td>sqlplus.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>Oracle XE</td>
+<td>sqlplus.exe</td>
+<td>sqlldr.exe</td>
+<td>sqlplus.exe</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>PostgreSQL</td>
+<td>psql.exe</td>
+<td>psql.exe</td>
+<td>psql.exe</td>
+</tr>
+<tr>
+<td>SQL Server</td>
+<td>SQL Server Enterprise</td>
+<td>sqlcmd.exe</td>
+<td>sqlcmd.exe</td>
+<td>sqlcmd.exe</td>
+</tr>
+<tr>
+<td></td>
+<td>SQL Server Express</td>
+<td>sqlcmd.exe</td>
+<td>sqlcmd.exe</td>
+<td>sqlcmd.exe</td>
+</tr>
+<tr>
+<td>SAP Sybase</td>
+<td>Sybase SQL Anywhere</td>
+<td>dbisql.com</td>
+<td>dbisql.com</td>
+<td>dbisql.com</td>
+</tr>
+<tr>
+<td></td>
+<td>SAP Sybase ASE</td>
+<td>dbisql.com</td>
+<td>dbisql.com</td>
+<td>dbisql.com</td>
+</tr>
+<tr>
+<td></td>
+<td>Sybase IQ</td>
+<td>dbisql.com</td>
+<td>dbisql.com</td>
+<td>dbisql.com</td>
+</tr>
+<tr>
+<td>TimesTen</td>
+<td>TimesTen</td>
+<td>ttBulkCp.exe</td>
+<td>ttBulkCp.exe</td>
+<td>ttIsql.exe</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>SQLite</td>
+<td>sqlite3.exe</td>
+<td>sqlite3.exe</td>
+<td>sqlite3.exe</td>
+</tr>
+</tbody>
+</table>
+
+<h4>
+<a id="nosql-stores" class="anchor" href="#nosql-stores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>noSQL stores.</h4>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Spooler</th>
+<th>Loader</th>
+<th>DbShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MongoDB</td>
+<td>mongoexport.exe</td>
+<td>mongoimport.exe</td>
+<td>mongo.exe</td>
+</tr>
+</tbody>
+</table>
+
+<h4>
+<a id="data-tools-2" class="anchor" href="#data-tools-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Tools.</h4>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Spooler</th>
+<th>Loader</th>
+<th>DbShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CURL</td>
+<td>curl.exe</td>
+<td>n/a</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="what-it-doesnt-do" class="anchor" href="#what-it-doesnt-do" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it doesn't do</h2>
+
+<ul>
+<li>It does not create target table.</li>
+<li>It does not pipe data (it extracts into a file then loads).</li>
+<li>It should not be used in Prod. Trial/ad-hoc use only.</li>
+</ul>
+
+<h2>
+<a id="implementation" class="anchor" href="#implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementation</h2>
+
+<ul>
+<li>Written using Python (command line) and wxPython (GUI).</li>
+<li>Compiled with PyInstaller</li>
+</ul>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
+
+<ul>
+<li>modify default host_map.py: <img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/edit_hostmap.png" alt="host_map.py" title="Edit host_map.py">
+</li>
+<li>set your 'source' and 'target' dirs for local clients for each database.</li>
+</ul>
+
+<div class="highlight highlight-source-python"><pre> <span class="pl-s"><span class="pl-pds">'</span>host_list<span class="pl-pds">'</span></span>: {<span class="pl-c1">0</span>: {<span class="pl-s"><span class="pl-pds">'</span>db_env<span class="pl-pds">'</span></span>: {<span class="pl-s"><span class="pl-pds">'</span>ORA11G<span class="pl-pds">'</span></span>: {<span class="pl-s"><span class="pl-pds">'</span>source<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-pds">'</span>C:<span class="pl-cce">\\</span>app<span class="pl-cce">\\</span>alex_buz<span class="pl-cce">\\</span>product<span class="pl-cce">\\</span>11.2.0<span class="pl-cce">\\</span>dbhome_2<span class="pl-cce">\\</span>BIN<span class="pl-pds">'</span></span>,
+                                         <span class="pl-s"><span class="pl-pds">'</span>target<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-pds">'</span>C:<span class="pl-cce">\\</span>app<span class="pl-cce">\\</span>alex_buz<span class="pl-cce">\\</span>product<span class="pl-cce">\\</span>11.2.0<span class="pl-cce">\\</span>dbhome_2<span class="pl-cce">\\</span>BIN<span class="pl-pds">'</span></span>},</pre></div>
+
+<ul>
+<li>you are good to go</li>
+</ul>
+
+<h2>
+<a id="execution" class="anchor" href="#execution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Execution</h2>
+
+<ul>
+<li>data-buddy.exe</li>
+</ul>
+
+<blockquote>
+<p>from Windows command line or File Explorer</p>
+</blockquote>
+
+<h1>
+<a id="target-object-truncate" class="anchor" href="#target-object-truncate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Target object Truncate</h1>
+
+<ul>
+<li>it will popup with warning window every time you try to run QueryCopy truncating you target object.
+<img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/truncate_target.png" alt="truncate" title="Truncate target">
+</li>
+</ul>
+
+<h1>
+<a id="templates-vs-free-argument-entry" class="anchor" href="#templates-vs-free-argument-entry" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Templates v.s. free argument entry</h1>
+
+<h2>
+<a id="pros" class="anchor" href="#pros" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros</h2>
+
+<ul>
+<li>all templates are tested with presets</li>
+</ul>
+
+<h2>
+<a id="cons" class="anchor" href="#cons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cons</h2>
+
+<ul>
+<li>user has to create new session if new argument has to be added/removed</li>
+</ul>
+
+<blockquote>
+<p>There's no way to add/remove args to your choosing. Argument combos come as templates which you select in "Create new session window"</p>
+</blockquote>
+
+<h1>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TODO</h1>
+
+<ul>
+<li>[x] argument values reuse from existing session. <strong>DONE</strong>
+</li>
+<li>[x] clean uargs.db. <strong>DONE</strong>
+</li>
+<li>[x] nls_format* duplication. <strong>DONE</strong>
+</li>
+<li>[ ] test UI.</li>
+<li>[x] add --log_dir to backend. <strong>DONE</strong>
+</li>
+<li>[x] add "source" and "target" datasources to "New Session". <strong>DONE</strong>
+</li>
+<li>[ ] Copy/Paste of argument values between sessions.</li>
+<li>[x] generic "New Session" so user not limited by source and target templates. <strong>DONE</strong>
+</li>
+<li>[ ] history of values for each argument.</li>
+<li>[ ] cleanup all other databases but Oracle.</li>
+<li>[ ] more templates and better templates hierarchy.</li>
+<li>[x] init templates to open session for "New Session". <strong>DONE</strong>
+</li>
+<li>[x] validate args on Run. <strong>DONE</strong>.</li>
+<li>[ ] smaller test_api files (get default args from test routines, not canned files).</li>
+<li>[x] fix template filters. <strong>DONE</strong>
+</li>
+<li>[ ] create "Menu" button and hide "About".</li>
+<li>[x] create templates tab <strong>DONE</strong>
+</li>
+<li>[x] create sessions tab <strong>DONE</strong>
+</li>
+<li>[x] validate session name for chars not usable in file name. <strong>DONE</strong>
+</li>
+<li>[x] allow user to create multiple session libraries. <strong>DONE</strong>
+</li>
+<li>[x] fix mailformed path from MDD.MultiDirDialog. <strong>DONE</strong>
+</li>
+<li>[x] make sure all paths are windows friendly.<strong>DONE</strong>
+</li>
+<li>[x] open dir and open file use stale values.<strong>DONE</strong>
+</li>
+<li>[x] filter control keys from ones affecting field value. <strong>DONE</strong>
+</li>
+<li>[ ] close all existing shells/shell groups upon exit.</li>
+<li>[x] highlight running sessions.<strong>DONE</strong>
+</li>
+<li>[ ] beep on failing sessions.</li>
+<li>[x] free argument entry.<strong>DONE</strong>
+</li>
+<li>[x] let user change arg list for a given group. <strong>DONE</strong>
+</li>
+<li>[x] detect DONE/FAILED from cmd window. <strong>DONE</strong>
+</li>
+<li>[x] let user disable post-etl email (Common: email_to). <strong>DONE</strong>
+</li>
+<li>[ ] change copy_vector format from db2db to db-db <strong>DONE</strong>
+</li>
+<li>[x] fix flicker on frame freeze <strong>DONE</strong>
+</li>
+<li>[x] save on close <strong>DONE</strong>
+</li>
+<li>[x] Table DDL export for Oracle <strong>DONE</strong>
+</li>
+<li>[x] validate all path arguments before run <strong>DONE</strong>
+</li>
+<li>[x] add create template menu <strong>DONE</strong>
+</li>
+<li>[x] add "--host_map" arg to set hosts for each thread <strong>DONE</strong>
+</li>
+<li>[x] let user change host mapping <strong>DONE</strong>
+</li>
+<li>[x] save as template <strong>DONE</strong>
+</li>
+<li>[x] save as <strong>DONE</strong>
+</li>
+<li>[x] create main menu <strong>DONE</strong>
+</li>
+<li>[ ] let user configure dafault argument values<br>
+</li>
+<li>[x] let user chenge frame size <strong>DONE</strong>
+</li>
+<li>[ ] test ezconnect</li>
+<li>[x] add "Output" tab <strong>DONE</strong>
+</li>
+<li>[ ] add '--compress_spool' arg for zipped output</li>
+<li>[x] add sqlloader.py <strong>DONE</strong>
+</li>
+<li>[x] add curl.exe for file download <strong>DONE</strong>
+</li>
+<li>[ ] load/save app state.</li>
+<li>[x] remove wx.BitmapButton memory leak</li>
+<li>[x] fix session sort <strong>DONE</strong>
+</li>
+<li>[x] fix session refresh <strong>DONE</strong>
+</li>
+<li>[x] fix awg.flatmenu memory leak <strong>DONE</strong>
+</li>
+<li>[x] fix awg.scrollablepanel memory leak</li>
+<li>[ ] let user set primary dbs, source/target dbs</li>
+<li>[ ] add scp/ftp/sftp as data source/target </li>
+<li>[ ] make all paths relative to transport_home <strong>DONE</strong>
+</li>
+<li>[ ] create wizard for "New Session" template selection</li>
+<li>[ ] distinguish A-Templates from B-Templates</li>
+<li>[x] let data copy to be executed on Linux (bash via nssh)<strong>DONE</strong>
+</li>
+<li>[ ] let data spool/load to be executed on Linux (bash via ssh)</li>
+<li>[ ] use netcat for job status instead of keeping open ssh conn</li>
+<li>[ ] use named file for QC status report instead of CLI title.</li>
+<li>[x] add <a href="http://docs.oracle.com/database/121/index.htm">Oracle 12c Release 1</a> <strong>DONE</strong>
+</li>
+<li>[x] add <a href="https://docs.oracle.com/cd/E11882_01/nav/portal_4.htm">Oracle 11g Release 2</a> <strong>DONE</strong>
+</li>
+<li>[x] add <a href="https://msdn.microsoft.com/en-US/sqlserver">SQLServer</a>   <strong>DONE</strong>
+</li>
+<li>[x] add <a href="http://dev.mysql.com/doc/">MySQL</a>    <strong>DONE</strong>
+</li>
+<li>[x] add <a href="http://www.postgresql.org/docs/">PostgreSQL</a>   <strong>DONE</strong>
+</li>
+<li>[x] add <a href="https://www.sqlite.org/docs.html">SQLite</a>   <strong>DONE</strong>
+</li>
+<li>[x] add <a href="http://www-01.ibm.com/support/knowledgecenter/SSGU8G_12.1.0/com.ibm.welcome.doc/welcome.htm?lang=en">Informix</a>   <strong>DONE</strong>
+</li>
+<li>[x] add <a href="http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.help.ase.15.7/title.htm">SAP ASE Sybase</a>   <strong>DONE</strong>
+</li>
+<li>[x] add <a href="http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.kc.doc/welcome.html">DB2</a>    <strong>DONE</strong>
+</li>
+<li>[ ] add <a href="http://www.dbase.com/dbasesql/dbase-documentation-download/">dBase</a><br>
+</li>
+<li>[ ] add <a href="https://msdn.microsoft.com/en-us/library/office/ff604965%28v=office.14%29.aspx">MS Access</a>
+</li>
+<li>[ ] add <a href="http://pandas.pydata.org/pandas-docs/version/0.12.0/">Pandas</a><br>
+</li>
+<li>[ ] add <a href="https://spark.apache.org/docs/latest/">Apache Spark</a><br>
+</li>
+<li>[ ] add <a href="https://storm.apache.org/documentation/Home.html">Apache Storm</a><br>
+</li>
+<li>[ ] add <a href="http://hadoop.apache.org/docs/r2.7.0/">Hadoop</a><br>
+</li>
+<li>[ ] add <a href="https://zookeeper.apache.org/">ZooKeeper</a><br>
+</li>
+<li>[ ] add <a href="https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html">HDFS</a><br>
+</li>
+<li>[x] add <a href="https://mariadb.com/kb/en/mariadb/documentation/">MariaDB</a>  <strong>DONE</strong>
+</li>
+<li>[x] add <a href="https://www.infobright.com/index.php/community-2/">Infobright</a>    <strong>DONE</strong>
+</li>
+<li>[x] add <a href="http://www.oracle.com/technetwork/database/database-technologies/timesten/documentation/index.html">TimesTen</a>    <strong>DONE</strong>
+</li>
+<li>[ ] add <a href="http://docs.mongodb.org/manual/">MongoDB</a>  <strong>DONE</strong>
+</li>
+<li>[ ] add <a href="http://hbase.apache.org/">HBase</a><br>
+</li>
+<li>[ ] add <a href="http://cassandra.apache.org/">Cassandra</a><br>
+</li>
+<li>[ ] add <a href="https://cloud.google.com/bigtable/docs/">Bigtable</a><br>
+</li>
+<li>[ ] add <a href="http://www.info.teradata.com/HTMLPubs/DB_TTU_14_00/index.html#page/Storage_Management/B035_2492_071A/2492ch01.084.17.html">Teradata</a><br>
+</li>
+<li>[ ] add <a href="http://doc.mapr.com/display/MapR/Hive">Apache Hive</a><br>
+</li>
+<li>[ ] add <a href="http://www.vertica.com/hp-vertica-documentation/hp-vertica-7-1-x-documentation/">Vertica</a><br>
+</li>
+<li>[ ] add <a href="https://www-304.ibm.com/support/knowledgecenter/SSULQD_7.2.0/com.ibm.nz.welcome.doc/doc/welcome.html">Netezza</a><br>
+</li>
+<li>[ ] add Parstream</li>
+<li>[ ] add ParAccel</li>
+<li>[ ] add <a href="http://redis.io/">Redis</a><br>
+</li>
+<li>[ ] add <a href="http://www.zodb.org/en/latest/documentation/tutorial.html">ZODB</a> </li>
+<li>[ ] add <a href="https://en.wikipedia.org/wiki/MonetDB">MonetDB</a><br>
+</li>
+<li>[ ] add <a href="https://en.wikipedia.org/wiki/Vectorwise">Vectorwise</a><br>
+</li>
+<li>[ ] add <a href="http://www.marklogic.com/what-is-marklogic/features/">MarkLogic</a><br>
+</li>
+<li>[ ] add <a href="http://aws.amazon.com/documentation/simpledb/">Amazon SimpleDB</a><br>
+</li>
+<li>[ ] add <a href="https://dev.twitter.com/streaming/overview">Twitter Streaming API</a>  (extract)</li>
+<li>[ ] add <a href="https://developers.google.com/analytics/devguides/reporting/core/v3/quickstart/service-py">Google Analytics</a><br>
+</li>
+<li>[ ] add <a href="https://www.openhub.net/p/cratedata">Crate Data</a>
+</li>
+<li>[ ] add Facebook (extract)</li>
+<li>[ ] add Taleo HR (extract) </li>
+<li>[ ] add Salesforce (<a href="https://developer.salesforce.com/docs/atlas.en-us.dataLoader.meta/dataLoader/">load</a>, extract) </li>
+<li>[ ] add <a href="http://gpdb.docs.pivotal.io/gpdb-435.html">Greenplum</a><br>
+</li>
+<li>[ ] add <a href="http://esd.actian.com/product/docs">Actian Ingres</a><br>
+</li>
+<li>[ ] add <a href="http://www.mcobject.com/embedded-database-manuals">McObject</a><br>
+</li>
+<li>[ ] add <a href="http://doc.nuodb.com/display/doc/NuoDB+Online+Documentation">NuiDB</a><br>
+</li>
+<li>[ ] add <a href="https://www.openhub.net/p/disco">Disco</a>
+</li>
+<li>[ ] add <a href="http://docs.clustrix.com/display/CLXDOC/Home">Clustrix</a><br>
+</li>
+<li>[ ] add <a href="http://orientdb.com/docs/last/">OrientDB</a><br>
+</li>
+<li>[ ] add <a href="http://kx.com/resources.php">KDB+</a><br>
+</li>
+<li>[ ] add <a href="http://docs.voltdb.com/">Volt DB</a><br>
+</li>
+<li>[ ] add <a href="https://www.found.no/foundation/elasticsearch-as-nosql/">Elasticsearch</a><br>
+</li>
+<li>[ ] add <a href="http://azure.microsoft.com/en-us/services/documentdb/">Azure DocumentDB</a><br>
+</li>
+<li>[ ] add <a href="https://www.arangodb.com/documentation/">Arango DB</a><br>
+</li>
+<li>[ ] add <a href="https://foundationdb.com/key-value-store/documentation/index.html">Foundation DB</a><br>
+</li>
+<li>[ ] add <a href="http://www.enterprisedb.com/products-services-training/products/documentation">Enterprise DB</a><br>
+</li>
+<li>[ ] add <a href="http://altibase.com/">Altibase HDB</a><br>
+</li>
+<li>[ ] add <a href="https://www.exasol.com/support/secure/attachment/30841/EXASolution_User_Manual-5.0.3-en.pdf">EXASOL</a><br>
+</li>
+<li>[ ] add <a href="http://www.teradata.com/Teradata-Aster/overview/">Aster</a><br>
+</li>
+<li>[ ] add <a href="http://aws.amazon.com/documentation/kinesis/">Kinesis</a> (extract)</li>
+<li>[ ] add <a href="http://aws.amazon.com/documentation/redshift/">Amazon Redshift</a><br>
+</li>
+<li>[ ] add <a href="https://aws.amazon.com/blogs/aws/highly-scalable-mysql-compat-rds-db-engine/">Amazon Aurora (RDS)</a> </li>
+<li>[ ] add <a href="https://www.rethinkdb.com/docs/">RethinkDB</a><br>
+</li>
+<li>[ ] add <a href="http://aws.amazon.com/documentation/dynamodb/">Amazon DynamoDB</a><br>
+</li>
+<li>[ ] add <a href="http://docs.couchbase.com/admin/admin/Couchbase-intro.html">Couchbase</a><br>
+</li>
+<li>[ ] add <a href="http://www.aerospike.com/docs/">Aerospike</a><br>
+</li>
+<li>[ ] add <a href="https://docs.basho.com/">Riak</a>
+</li>
+<li>[ ] add <a href="http://docs.memsql.com/latest/">MemSQL</a>
+</li>
+<li>[ ] add <a href="http://www.intersystems.com/our-products/cache/managing-data/">InterSystems Caché</a>,  <a href="http://docs.intersystems.com/ens20131/csp/docbook/DocBook.UI.Page.cls?KEY=GSQL_shell">export</a><br>
+</li>
+<li>[ ] add QV (QlikView file format)</li>
+<li>[ ] add MDX (file format)</li>
+<li>[ ] add <a href="http://sqream.com/solutions/products/sqream-db/">SQream DB</a> </li>
+<li>[ ] add <a href="https://www.1010data.com/technology">1010data</a>
+</li>
+<li>[ ] add <a href="http://kognitio.com/analyticalplatform/">Kognitio</a>
+</li>
+<li>[ ] add <a href="http://www.sand.com/">SAND Technology</a>
+</li>
+<li>[ ] Create tests using <a href="http://pyautogui.readthedocs.org/en/latest/">PyAutoGUI</a>
+</li>
+<li>[ ] Add Amazon Simple Storage Service <a href="https://aws.amazon.com/s3/">S3</a>
+</li>
+<li>[ ] Apache Derby (<a href="https://db.apache.org/derby/">https://db.apache.org/derby/</a>)</li>
+</ul>
+
+<h2>
+<a id="limitations" class="anchor" href="#limitations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Limitations</h2>
+
+<ul>
+<li>tested to run only on Windows for now (even thou it's wxPython)</li>
+<li>CSV dump files are uncompressed (will add zip compression as option)</li>
+<li>physical copy is done on Windows. Only Oracle copy can be executed on Linux (bash via ssh)</li>
+</ul>
+
+<h2>
+<a id="performance" class="anchor" href="#performance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Performance</h2>
+
+<ul>
+<li>data copy speed mostly depends on your NIC(Ethernet) speed and other factors like how <em>far</em> you are from target and source servers (in terms of network topology and physically). </li>
+</ul>
+
+<blockquote>
+<p>I've seen 10x performance improvement when I ran it on DEV Linux server (10Gb Ethernet) v.s. my office Windows Desktop (100Mb Ethernet).</p>
+</blockquote>
+
+<h2>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+
+<ul>
+<li>
+<a href="https://github.com/QueryCopy/QueryCopy-for-Oracle">QueryCopy for Oracle</a> -- <code>qc32\qc32.exe</code>
+</li>
+</ul>
+
+<h2>
+<a id="vendor-docs" class="anchor" href="#vendor-docs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vendor Docs</h2>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Version</th>
+<th>Export</th>
+<th>Import</th>
+<th>DbShell</th>
+<th>File formats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://docs.oracle.com/database/121/index.htm">Oracle 12c</a></td>
+<td><code>12c Release 1</code></td>
+<td><a href="https://docs.oracle.com/database/121/SQPUG/toc.htm">SQL*Plus </a></td>
+<td><a href="https://docs.oracle.com/database/121/SUTIL/ldr_concepts.htm#SUTIL003">SQL*Loader </a></td>
+<td></td>
+<td>CSV, DDL</td>
+</tr>
+<tr>
+<td><a href="https://docs.oracle.com/cd/E11882_01/nav/portal_4.htm">Oracle 11g</a></td>
+<td><code>11g Release 2</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.openhub.net/p/disco">Disco</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.openhub.net/p/cratedata">Crate Data</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://docs.mongodb.org/manual/">MongoDB</a></td>
+<td><code>3.0</code></td>
+<td><a href="http://docs.mongodb.org/v2.2/reference/mongoexport/">mongoexport</a></td>
+<td><a href="http://docs.mongodb.org/v2.2/reference/mongoimport/">mongoimport</a></td>
+<td><a href="http://docs.mongodb.org/manual/faq/mongo/">mongo shell</a></td>
+<td>CSV, JSON</td>
+</tr>
+<tr>
+<td><a href="http://www.oracle.com/technetwork/database/database-technologies/timesten/documentation/index.html">TimesTen</a></td>
+<td><code>Release 2</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://aws.amazon.com/documentation/dynamodb/">Amazon DynamoDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://hadoop.apache.org/docs/r2.7.0/">Hadoop</a></td>
+<td><code>r2.7.0</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.exasol.com/support/secure/attachment/30841/EXASolution_User_Manual-5.0.3-en.pdf">EXASOL</a></td>
+<td><code>5.0.3</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td>pdf</td>
+</tr>
+<tr>
+<td><a href="http://aws.amazon.com/documentation/kinesis/">Kinesis</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www-304.ibm.com/support/knowledgecenter/SSULQD_7.2.0/com.ibm.nz.welcome.doc/doc/welcome.html">Netezza</a></td>
+<td><code>7.2.0</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://kx.com/resources.php">KDB+</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.teradata.com/Teradata-Aster/overview/">Aster</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.aerospike.com/docs/">Aerospike</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://docs.couchbase.com/admin/admin/Couchbase-intro.html">Couchbase</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://aws.amazon.com/documentation/redshift/">Redshift</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.enterprisedb.com/products-services-training/products/documentation">Enterprise DB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://foundationdb.com/key-value-store/documentation/index.html">Foundation DB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.arangodb.com/documentation/">Arango DB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://docs.voltdb.com/">Volt DB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://orientdb.com/docs/last/">OrientDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://docs.clustrix.com/display/CLXDOC/Home">Clustrix</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://doc.nuodb.com/display/doc/NuoDB+Online+Documentation">NuiDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.mcobject.com/embedded-database-manuals">McObject</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://esd.actian.com/product/docs">Actian Ingres</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://gpdb.docs.pivotal.io/gpdb-435.html">Greenplum</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developer.salesforce.com/docs/atlas.en-us.dataLoader.meta/dataLoader/">Salesforce</a></td>
+<td></td>
+<td><a href="https://developer.salesforce.com/docs/atlas.en-us.dataLoader.meta/dataLoader/">DataLoader</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://dev.twitter.com/streaming/overview">Twitter Streaming API</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://developers.google.com/analytics/devguides/reporting/core/v3/quickstart/service-py">Google Analytics</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.vertica.com/hp-vertica-documentation/hp-vertica-7-1-x-documentation/">Vertica</a></td>
+<td><code>7-1-x</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://msdn.microsoft.com/en-US/sqlserver">SQLServer</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://dev.mysql.com/doc/">MySQL</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.postgresql.org/docs/">PostgreSQL</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.sqlite.org/docs.html">SQLite</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www-01.ibm.com/support/knowledgecenter/SSGU8G_12.1.0/com.ibm.welcome.doc/welcome.htm?lang=en">Informix</a></td>
+<td><code>12.1.0</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.help.ase.15.7/title.htm">SAP ASE Sybase</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.kc.doc/welcome.html">DB2</a></td>
+<td><code>10.5.0</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.dbase.com/dbasesql/dbase-documentation-download/">dBase</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://msdn.microsoft.com/en-us/library/office/ff604965%28v=office.14%29.aspx">MS Access</a></td>
+<td><code>10.0</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://pandas.pydata.org/pandas-docs/version/0.12.0/">Pandas</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://spark.apache.org/docs/latest/">Apache Spark</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://storm.apache.org/documentation/Home.html">Apache Storm</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://mariadb.com/kb/en/mariadb/documentation/">MariaDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.infobright.com/index.php/community-2/">Infobright</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://cassandra.apache.org/">Cassandra</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://hbase.apache.org/">HBase</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.info.teradata.com/HTMLPubs/DB_TTU_14_00/index.html#page/Storage_Management/B035_2492_071A/2492ch01.084.17.html">Teradata</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://cloud.google.com/bigtable/docs/">Bigtable</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://doc.mapr.com/display/MapR/Hive">Apache Hive</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.intersystems.com/our-products/cache/managing-data/">InterSystems Caché</a></td>
+<td></td>
+<td></td>
+<td><a href="http://docs.intersystems.com/ens20131/csp/docbook/DocBook.UI.Page.cls?KEY=GSQL_shell">export</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://altibase.com/">Altibase HDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://zookeeper.apache.org/">ZooKeeper</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html">HDFS</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://aws.amazon.com/documentation/simpledb/">Amazon SimpleDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://aws.amazon.com/documentation/redshift/">Amazon Redshift</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://azure.microsoft.com/en-us/services/documentdb/">Azure DocumentDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.found.no/foundation/elasticsearch-as-nosql/">Elasticsearch</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.basho.com/">Riak</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://docs.memsql.com/latest/">MemSQL</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.marklogic.com/what-is-marklogic/features/">MarkLogic</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://sqream.com/solutions/products/sqream-db/">SQream DB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.1010data.com/technology">1010data</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://kognitio.com/analyticalplatform/">Kognitio</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.sand.com/">SAND Technology</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://redis.io/">Redis</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.zodb.org/en/latest/documentation/tutorial.html">ZODB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service/S3</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://aws.amazon.com/blogs/aws/highly-scalable-mysql-compat-rds-db-engine/">Amazon Aurora</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.rethinkdb.com/docs/">RethinkDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://db.apache.org/derby/">Apache Derby</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="vendor-architecture" class="anchor" href="#vendor-architecture" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vendor architecture</h2>
+
+<p><a href="http://s3.amazonaws.com/info-mongodb-com/MongoDB_Architecture_Guide.pdf">MongoDB Architecture Guide</a></p>
+
+<table>
+<thead>
+<tr>
+<th>Data Tools</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://curl.haxx.se/download.html">cURL</a></td>
+<td>7.33</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<ul>
+<li>New Session Menu: </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/new_session_all_dbs.png" alt="New Session Menu" title="New Session Menu"></p>
+
+<ul>
+<li>Add New Session: </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/new_session.png" alt="Add New Session" title="Add New Session"></p>
+
+<ul>
+<li>Run Session: </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/Run_Session_for_SQLServer_to_CSV_file_extract.png" alt="Run Session" title="Run Session"></p>
+
+<ul>
+<li>Executed Session: </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/Session_Executed_for_SQLServer_to_CSV_file_extract.png" alt="Executed Session" title="Executed Session"></p>
+
+<ul>
+<li>Output Tab: </li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/ouput_tab.png" alt="Output Tab" title="Output Tab"></p>
+
+<h2>
+<a id="copy-vector-matrix-via-csv" class="anchor" href="#copy-vector-matrix-via-csv" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copy vector matrix (via CSV)</h2>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>DB2</th>
+<th>Informix</th>
+<th>MariaDB</th>
+<th>MySQL</th>
+<th><strong>Oracle</strong></th>
+<th>PostgreSQL</th>
+<th>SQLite</th>
+<th>SQLServer</th>
+<th>Sybase</th>
+<th>TimesTen</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Informix</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td><strong>Oracle</strong></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>SQLServer</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Sybase</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>TimesTen</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Mongo DB</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td><a href="https://github.com/data-buddy/DataBuddy/blob/master/Docs/markdown/MongoDB/Copy/Copy_Table_Data_From_Oracle_to_MongoDB_Collection.md">X</a></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>'x' means feature is implemented and is part of the release <a href="https://github.com/data-buddy/DataBuddy/releases/tag/v0.3.3">0.3.3</a></p>
+</blockquote>
+
+<h2>
+<a id="copy-vector-matrix-via-json" class="anchor" href="#copy-vector-matrix-via-json" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copy vector matrix (via JSON)</h2>
+
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB2</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Informix</td>
+<td>x</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td>x</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>x</td>
+</tr>
+<tr>
+<td><strong>Oracle</strong></td>
+<td>x</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>x</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>x</td>
+</tr>
+<tr>
+<td>SQLServer</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Sybase</td>
+<td>x</td>
+</tr>
+<tr>
+<td>TimesTen</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Mongo DB</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="databuddy-docs" class="anchor" href="#databuddy-docs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Databuddy Docs</h2>
+
+<ul>
+<li>
+<p>[ ] General docs</p>
+
+<ul>
+<li><a href="https://github.com/data-buddy/DataBuddy/blob/master/Docs/markdown/Configure_Databuddy0.3.3.md">Configure_Databuddy0.3.3</a></li>
+<li><a href="https://github.com/data-buddy/DataBuddy/blob/master/Docs/markdown/How_to_start_Databuddy.md">How_to_start_Databuddy</a></li>
+</ul>
+</li>
+<li>
+<p>[ ] SQL Server</p>
+
+<ul>
+<li>
+<a href="https://github.com/data-buddy/DataBuddy/blob/master/Docs/markdown/SQLServerEnterprise/Extract/Extracting_Table_Data_From_SQLServer_to_CSV_File.md">Extracting_Table_Data_From_SQLServer_to_CSV_File</a> </li>
+</ul>
+</li>
+<li>[ ] MongoDB
+
+<ul>
+<li><a href="https://github.com/data-buddy/DataBuddy/blob/master/Docs/markdown/MongoDB/Copy/Copy_Table_Data_From_Oracle_to_MongoDB_Collection.md">Copy_Table_Data_From_Oracle_to_MongoDB_Collection</a></li>
+</ul>
+</li>
+<li>
+<p>[ ] Oracle</p>
+
+<ul>
+<li>
+<a href="https://github.com/data-buddy/DataBuddy/blob/master/Docs/markdown/MongoDB/Copy/Copy_Table_Data_From_Oracle_to_MongoDB_Collection.md">Copy_Table_Data_From_Oracle_to_MongoDB_Collection</a> </li>
+</ul>
+</li>
+<li><p>[ ] CURL</p></li>
+<li>
+<a href="https://github.com/data-buddy/Databuddy/blob/master/Docs/markdown/CURL/Copy/Copy_data_from_Web_to_Oracle11g.md">Copy_data_from_Web_to_Oracle11g</a> </li>
+</ul>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+
+<ul>
+<li><code>git clone https://github.com/data-buddy/DataBuddy/</code></li>
+<li>
+<a href="https://github.com/data-buddy/DataBuddy/releases/tag/0.3.5">Data Buddy latest release</a> -- <code>data-buddy 0.3.5</code>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Databuddy maintained by <a href="https://github.com/data-buddy">data-buddy</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
