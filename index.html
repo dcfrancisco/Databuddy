@@ -42,14 +42,16 @@
 <table>
 <thead>
 <tr>
+<th>Name</th>
 <th>OS</th>
 <th>Platform</th>
 <th>data-buddy (GUI)</th>
-<th>QueryCopy (command line)</th>
+<th>DataBuddy CLI (command line)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>DataBuddy.exe</td>
 <td>Windows</td>
 <td>32bit</td>
 <td><a href="https://github.com/data-buddy/DataBuddy/releases/tag/0.3.5">0.3.5 beta</a></td>
@@ -59,7 +61,7 @@
 </table>
 
 <blockquote>
-<p>There are 2 components. Upon "Run" data-buddy (UI) will kick off QueryCopy (<code>qc32\qc.exe</code>) out of process.</p>
+<p>There are 2 components. Upon "Run" Databuddy GUI (DataBuddy.exe) will kick off Databuddy CLI (<code>qc32\qc.exe</code>) out of process.</p>
 </blockquote>
 
 <h2>
@@ -97,8 +99,8 @@ it supports self-service data extraction, preparation, and cleansing by database
 <thead>
 <tr>
 <th>Database</th>
-<th>GUI (data-buddy)</th>
-<th>Command line (QueryCopy)</th>
+<th>GUI (DataBuddy)</th>
+<th>Command line (DataBuddy CLI)</th>
 </tr>
 </thead>
 <tbody>
@@ -168,7 +170,7 @@ it supports self-service data extraction, preparation, and cleansing by database
 <tr>
 <th>Database</th>
 <th>GUI (data-buddy)</th>
-<th>Command line (QueryCopy)</th>
+<th>Command line (DataBuddy CLI)</th>
 </tr>
 </thead>
 <tbody>
@@ -188,7 +190,7 @@ it supports self-service data extraction, preparation, and cleansing by database
 <tr>
 <th>Name</th>
 <th>GUI (data-buddy)</th>
-<th>Command line (QueryCopy)</th>
+<th>Command line (DataBuddy CLI)</th>
 </tr>
 </thead>
 <tbody>
@@ -336,7 +338,7 @@ it supports self-service data extraction, preparation, and cleansing by database
 
 <ul>
 <li>GUI - data-buddy (wxPython, PyInstaller).</li>
-<li>Command line -<a href="https://github.com/QueryCopy/QueryCopy-for-Oracle/releases/tag/v1.23.9">QueryCopy</a> (Python, PyInstaller).</li>
+<li>Command line -<a href="https://github.com/QueryCopy/QueryCopy-for-Oracle/releases/tag/v1.23.9">DataBuddy CLI</a> (Python, PyInstaller).</li>
 </ul>
 
 <h2>
@@ -350,7 +352,7 @@ it supports self-service data extraction, preparation, and cleansing by database
 </ul>
 
 <h3>
-<a id="command-line-querycopy" class="anchor" href="#command-line-querycopy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command line (QueryCopy):</h3>
+<a id="command-line-databuddy-cli" class="anchor" href="#command-line-databuddy-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command line (DataBuddy CLI):</h3>
 
 <ul>
 <li>[x] Multi-query load.</li>
@@ -795,7 +797,7 @@ it supports self-service data extraction, preparation, and cleansing by database
 <a id="target-object-truncate" class="anchor" href="#target-object-truncate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Target object Truncate</h1>
 
 <ul>
-<li>it will popup with warning window every time you try to run QueryCopy truncating you target object.
+<li>it will popup with warning window every time you try to run DataBuddy CLI truncating you target object.
 <img src="https://raw.githubusercontent.com/data-buddy/DataBuddy/master/screenshots/truncate_target.png" alt="truncate" title="Truncate target">
 </li>
 </ul>
@@ -1069,6 +1071,9 @@ it supports self-service data extraction, preparation, and cleansing by database
 </li>
 <li>[ ] add <a href="http://www.sand.com/">SAND Technology</a>
 </li>
+<li>[ ] add <a href="http://infinidb.co/">InfiniDB</a>
+</li>
+<li>[ ] add <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/">SQL Data Warehouse</a> </li>
 <li>[ ] Create tests using <a href="http://pyautogui.readthedocs.org/en/latest/">PyAutoGUI</a>
 </li>
 <li>[ ] Add Amazon Simple Storage Service <a href="https://aws.amazon.com/s3/">S3</a>
@@ -1101,7 +1106,7 @@ it supports self-service data extraction, preparation, and cleansing by database
 
 <ul>
 <li>
-<a href="https://github.com/QueryCopy/QueryCopy-for-Oracle">QueryCopy for Oracle</a> -- <code>qc32\qc32.exe</code>
+<a href="https://github.com/QueryCopy/QueryCopy-for-Oracle">DataBuddy CLI for Oracle</a> -- <code>qc32\qc32.exe</code>
 </li>
 </ul>
 
@@ -1680,6 +1685,22 @@ it supports self-service data extraction, preparation, and cleansing by database
 <td></td>
 <td></td>
 </tr>
+<tr>
+<td><a href="http://infinidb.co/">InfiniDB</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/">SQL Data Warehouse</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -2023,6 +2044,122 @@ it supports self-service data extraction, preparation, and cleansing by database
 <li>
 <a href="https://github.com/data-buddy/DataBuddy/releases/tag/0.3.5">Data Buddy latest release</a> -- <code>data-buddy 0.3.5</code>
 </li>
+<li>
+</ul>
+
+<h1>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FAQ</h1>
+
+<h4>
+<a id="can-it-load-csv-file-from-windows-desktop-to-oracle-database" class="anchor" href="#can-it-load-csv-file-from-windows-desktop-to-oracle-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can it load CSV file from Windows desktop to Oracle database.</h4>
+
+<p>Yes, it is the main purpose of this tool.</p>
+
+<h4>
+<a id="can-developers-integrate-csv-loader-into-their-etl-pipelines" class="anchor" href="#can-developers-integrate-csv-loader-into-their-etl-pipelines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can developers integrate CSV loader into their ETL pipelines?</h4>
+
+<p>Yes, assuming they are doing it on OS Windows.</p>
+
+<h4>
+<a id="how-fast-is-data-upload-using-databuddy" class="anchor" href="#how-fast-is-data-upload-using-databuddy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How fast is data upload using <code>Databuddy</code>?</h4>
+
+<p>It is as fast as SQL<em>Loader because I'm using SQL</em>Loader in DIRECT mode.</p>
+
+<h4>
+<a id="how-to-inscrease-upload-speed" class="anchor" href="#how-to-inscrease-upload-speed" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to inscrease upload speed?</h4>
+
+<p>Parallelize your load by loading multiple partitions in parallel or sharding your data.</p>
+
+<h4>
+<a id="what-are-the-other-ways-to-upload-file-to-oracle" class="anchor" href="#what-are-the-other-ways-to-upload-file-to-oracle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What are the other ways to upload file to Oracle?</h4>
+
+<p>You can use SQL<em>Loader or execute insert statements using ODBC/JDBC or SQL</em>Plus.</p>
+
+<h4>
+<a id="can-i-just-zip-it-using-windows-file-explorer" class="anchor" href="#can-i-just-zip-it-using-windows-file-explorer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can I just zip it using Windows File Explorer?</h4>
+
+<p>No, Redshift will not recognize *.zip file format.
+You have to <code>gzip</code> it. You can use 7-Zip to do that.</p>
+
+<h4>
+<a id="does-it-delete-source-file-load" class="anchor" href="#does-it-delete-source-file-load" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Does it delete source file load?</h4>
+
+<p>No</p>
+
+<h4>
+<a id="does-it-create-target-oracle-table" class="anchor" href="#does-it-create-target-oracle-table" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Does it create target Oracle table?</h4>
+
+<p>No</p>
+
+<h4>
+<a id="im-experiencing-errors-in-oracle-how-can-i-debug" class="anchor" href="#im-experiencing-errors-in-oracle-how-can-i-debug" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>I'm experiencing errors in Oracle. How can I debug?</h4>
+
+<p>You can set Common Args <code>debug_level</code> to a value&gt;1</p>
+
+<h4>
+<a id="explain-how-it-works" class="anchor" href="#explain-how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Explain how it works?</h4>
+
+<ul>
+<li>The CSV file you provided is analyzed - number of records in it is estimated.</li>
+<li>Control file is created using target table column names.</li>
+<li>Data is loaded using SQL*Loader</li>
+</ul>
+
+<h4>
+<a id="how-do-i-skip-the-header-record-in-input-csv-file" class="anchor" href="#how-do-i-skip-the-header-record-in-input-csv-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How do I skip the header record in input CSV file?</h4>
+
+<p>Use <code>--skip_rows  1</code> to ignore input rows.</p>
+
+<h4>
+<a id="how-do-i-set-custom-timestamp-format-for-oracle-load" class="anchor" href="#how-do-i-set-custom-timestamp-format-for-oracle-load" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How do i set custom timestamp format for Oracle load?</h4>
+
+<p>Use <code>--nls_date_format "MM/DD/YYYY HH12:MI:SS"</code> or <code>--nls_timestamp_format "MM/DD/YYYY HH12:MI:SS.FF2 PM"</code> or <code>--nls_timestamp_tz_format "MM/DD/YYYY HH12:MI:SS.FF2 TZH:TZM"</code> to control timestamp format.</p>
+
+<h4>
+<a id="what-technology-was-used-to-create-this-tool" class="anchor" href="#what-technology-was-used-to-create-this-tool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What technology was used to create this tool</h4>
+
+<p>I used SQL*Loader and  wxPython to write it.</p>
+
+<h4>
+<a id="where-are-the-sources" class="anchor" href="#where-are-the-sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Where are the sources?</h4>
+
+<p>Please, contact me for sources.</p>
+
+<h4>
+<a id="can-you-modify-functionality-and-add-features" class="anchor" href="#can-you-modify-functionality-and-add-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can you modify functionality and add features?</h4>
+
+<p>Yes, please, ask me for new features.</p>
+
+<h4>
+<a id="what-other-aws-tools-youve-created" class="anchor" href="#what-other-aws-tools-youve-created" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What other AWS tools you've created?</h4>
+
+<ul>
+<li>
+<a href="https://github.com/alexbuz/Oracle_To_S3_Data_Uploader">Oracle_To_S3_Data_Uploader</a> - Stream Oracle data to Amazon- S3.</li>
+<li>
+<a href="https://github.com/alexbuz/S3_Sanity_Check/blob/master/README.md">S3_Sanity_Check</a> - let's you <code>ping</code> Amazon-S3 bucket to see if it's publicly readable.</li>
+<li>
+<a href="https://github.com/alexbuz/EC2_Metrics_Plotter/blob/master/README.md">EC2_Metrics_Plotter</a> - plots any CloudWatch EC2 instance  metric stats.</li>
+<li>
+<a href="https://github.com/alexbuz/S3_File_Uploader/blob/master/README.md">S3_File_Uploader</a> - uploads file from Windows to S3.</li>
+</ul>
+
+<h4>
+<a id="do-you-have-any-aws-certifications" class="anchor" href="#do-you-have-any-aws-certifications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Do you have any AWS Certifications?</h4>
+
+<p>Yes, <a href="https://raw.githubusercontent.com/alexbuz/FAQs/master/images/AWS_Ceritied_Developer_Associate.png">AWS Certified Developer (Associate)</a></p>
+
+<h4>
+<a id="can-you-create-similarcustom-data-tool-for-our-business" class="anchor" href="#can-you-create-similarcustom-data-tool-for-our-business" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can you create similar/custom data tool for our business?</h4>
+
+<p>Yes, you can PM me here or email at <code>alex_buz@yahoo.com</code>.
+I'll get back to you within hours.</p>
+
+<h3>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h3>
+
+<ul>
+<li><a href="https://github.com/alexbuz/FAQs/blob/master/README.md">Employment FAQ</a></li>
 </ul>
       </section>
     </div>
